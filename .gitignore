@@ -1,0 +1,12 @@
+__pycache__/
+.DS_Store
+.pytest_cache/
+.venv/
+*.pyc
+*.skb
+/*.skp
+bridge/trigger
+out/
+.claude/settings.local.json
+bridge/.trigger.*.tmp
+*.tmp-*

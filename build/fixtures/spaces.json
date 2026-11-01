@@ -1,0 +1,15 @@
+{
+ "ir_version": 1,
+ "meta": {"project": {"name": "fixture: spaces and slabs"}, "variant": "fixture", "generated_by": "hand-written", "note": "A room with a flat ceiling; a loft over it whose ceiling slopes down toward +y (a ceiling_plane); a closet that builds no ceiling (an open top); a porch two 7 in risers down whose floor is its concrete slab's top (build_floor false), in an outdoor zone; and a floor slab under the room, its top a finish depth (0.75 in) under the room's floor face."},
+ "zones": {"living": {"storey": 0}, "loft": {"storey": 1}, "porch": {"storey": 0, "outdoor": true}},
+ "datums": {"main_floor": 0.0, "main_ceiling": 96.0},
+ "elements": [
+ {"id": "living.space.main", "type": "space", "zone": "living", "src": "assumed", "outline": [[0, 0], [144, 0], [144, 120], [0, 120]], "floor_z": 0.0, "ceiling_z": 96.0, "floor_finish": "oak"},
+ {"id": "living.slab.floor", "type": "slab", "zone": "living", "src": "assumed", "outline": [[0, 0], [144, 0], [144, 120], [0, 120]], "z_top": -0.75, "thickness": 10.0},
+ {"id": "living.space.closet", "type": "space", "zone": "living", "src": "assumed", "outline": [[144, 0], [180, 0], [180, 36], [144, 36]], "floor_z": 0.0, "build_floor": true},
+ {"id": "loft.space.main", "type": "space", "zone": "loft", "src": "assumed", "outline": [[0, 0], [144, 0], [144, 120], [0, 120]], "floor_z": 106.0, "ceiling_plane": {"at": [0, 0, 190.0], "slope": [0.0, -0.5]}, "floor_finish": "carpet"},
+ {"id": "loft.slab.floor", "type": "slab", "zone": "loft", "src": "assumed", "outline": [[0, 0], [144, 0], [144, 120], [0, 120]], "z_top": 105.25, "thickness": 9.25, "finish": "wood_light"},
+ {"id": "porch.slab.main", "type": "slab", "zone": "porch", "src": "assumed", "outline": [[0, -60], [144, -60], [144, 0], [0, 0]], "z_top": -14.0, "thickness": 4.0},
+ {"id": "porch.space.main", "type": "space", "zone": "porch", "src": "assumed", "outline": [[0, -60], [144, -60], [144, 0], [0, 0]], "floor_z": -14.0, "build_floor": false}
+ ]
+}

@@ -1,0 +1,35 @@
+{
+ "out": "out/renders/living-01_edges.png",
+ "width": 1602,
+ "height": 1067,
+ "eye": [
+  230.056822,
+  124.151309,
+  58.03089
+ ],
+ "target": [
+  120.087942,
+  14.305483,
+  58.03089
+ ],
+ "up": [
+  0.0,
+  0.0,
+  1.0
+ ],
+ "fov_v_deg": 54.940519383017,
+ "projection": "perspective",
+ "style": "edges",
+ "transparent": true,
+ "hide_tags": [
+  "zone/roof"
+ ],
+ "crop": [
+  0,
+  0,
+  1600,
+  1067
+ ],
+ "pixel_aspect": 1.0,
+ "expect_ir_sha256": "6d011350c80dee376272af1f464dd80a901e2dee626483ae1a348c1c737d761e"
+}

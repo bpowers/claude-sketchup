@@ -1,0 +1,21 @@
+{
+ "ir_version": 1,
+ "meta": {"project": {"name": "fixture: creases where elements meet"}, "variant": "fixture", "generated_by": "hand-written", "note": "A 240 in square room, walls on its outline overlapping to their outer faces. Two diagonal walls cross in an X; a stub wall runs through the east wall where that wall has a plain window hole; a round column runs through a faux beam; a tall cabinet is set 4 in into the south wall; the south wall rises through the ceiling into a sloped roof slab; a small box passes through a glazed window. Each meeting draws its crease under HOUSE/intersections (or the build's top group): the four full-height corners of the X; the stub's corners stopping at the hole's sill and head; the cabinet's three edges on the wall face; one ceiling line along the south wall; none against glass."},
+ "zones": {"living": {"storey": 0}, "kitchen": {"storey": 0}, "exterior": {"storey": 0}, "roof": {"storey": 9}},
+ "datums": {"main_floor": 0.0, "main_ceiling": 96.0},
+ "elements": [
+ {"id": "creases.space.room", "type": "space", "zone": "living", "src": "assumed", "outline": [[0, 0], [240, 0], [240, 240], [0, 240]], "floor_z": 0.0, "ceiling_z": 96.0},
+ {"id": "creases.wall.south", "type": "wall", "zone": "exterior", "src": "assumed", "a": [-3, 0], "b": [243, 0], "thickness": 6.0, "z0": 0.0, "top_a": 120.0, "top_b": 120.0, "kind": "exterior", "openings": []},
+ {"id": "creases.wall.east", "type": "wall", "zone": "exterior", "src": "assumed", "a": [240, -3], "b": [240, 243], "thickness": 6.0, "z0": 0.0, "top_a": 96.0, "top_b": 96.0, "kind": "exterior", "openings": [{"id": "creases.wall.east.hole", "kind": "window", "at": 100.0, "width": 40.0, "sill_z": 30.0, "head_z": 70.0}]},
+ {"id": "creases.wall.north", "type": "wall", "zone": "exterior", "src": "assumed", "a": [243, 240], "b": [-3, 240], "thickness": 6.0, "z0": 0.0, "top_a": 96.0, "top_b": 96.0, "kind": "exterior", "openings": [{"id": "creases.wall.north.window", "kind": "window", "at": 100.0, "width": 40.0, "sill_z": 30.0, "head_z": 70.0, "unit": {"frame": {"left": 4.0, "right": 1.0, "bottom": 2.0, "top": 3.0}}}]},
+ {"id": "creases.wall.west", "type": "wall", "zone": "exterior", "src": "assumed", "a": [0, 243], "b": [0, -3], "thickness": 6.0, "z0": 0.0, "top_a": 96.0, "top_b": 96.0, "kind": "exterior", "openings": []},
+ {"id": "creases.wall.diag1", "type": "wall", "zone": "living", "src": "assumed", "a": [30, 30], "b": [130, 130], "thickness": 6.0, "z0": 0.0, "top_a": 96.0, "top_b": 96.0, "kind": "interior", "openings": []},
+ {"id": "creases.wall.diag2", "type": "wall", "zone": "living", "src": "assumed", "a": [30, 130], "b": [130, 30], "thickness": 6.0, "z0": 0.0, "top_a": 96.0, "top_b": 96.0, "kind": "interior", "openings": []},
+ {"id": "creases.wall.stub", "type": "wall", "zone": "living", "src": "assumed", "a": [180, 120], "b": [250, 120], "thickness": 6.0, "z0": 0.0, "top_a": 96.0, "top_b": 96.0, "kind": "interior", "openings": []},
+ {"id": "creases.column.round", "type": "column", "zone": "living", "src": "assumed", "center": [150, 180], "shape": "round", "diameter": 8.0, "z0": 0.0, "z1": 96.0},
+ {"id": "creases.beam.cross", "type": "beam", "zone": "living", "src": "assumed", "a": [100, 180], "b": [237, 180], "width": 6.0, "depth": 10.0, "soffit_z": 86.0, "kind": "faux"},
+ {"id": "creases.box.embedded", "type": "box", "zone": "kitchen", "src": "assumed", "bbox": [200, -1, 0, 230, 30, 90], "kind": "tall_cabinet"},
+ {"id": "creases.box.through_glass", "type": "box", "zone": "kitchen", "src": "assumed", "bbox": [115, 236, 40, 125, 244, 50], "kind": "placeholder"},
+ {"id": "creases.roof.slope", "type": "roof_plane", "zone": "roof", "src": "assumed", "pts": [[-12, -12, 130.0], [252, -12, 130.0], [252, 252, 110.0], [-12, 252, 110.0]], "thickness": 10.0}
+ ]
+}

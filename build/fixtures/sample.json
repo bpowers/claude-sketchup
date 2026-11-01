@@ -1,0 +1,21 @@
+{
+ "ir_version": 1,
+ "meta": {"project": {"name": "fixture: one of every type"}, "variant": "fixture", "generated_by": "hand-written", "note": "A 144 x 120 in room with a window and a door, a beam on a column, a counter run, a porch slab two risers down with its stair, and a shed roof. It carries a location, so a HOUSE build of it sets SketchUp's geo-location."},
+ "zones": {"living": {"storey": 0}, "porch": {"storey": 0, "outdoor": true}, "exterior": {"storey": 0}, "roof": {"storey": 9}},
+ "datums": {"main_floor": 0.0, "main_ceiling": 96.0},
+ "location": {"city": "Example Town", "country": "USA", "latitude": 45.0, "longitude": -122.0, "tz_offset": -8.0, "north_angle": 0.0},
+ "elements": [
+ {"id": "sample.space.room", "type": "space", "zone": "living", "src": "assumed", "outline": [[6, 6], [138, 6], [138, 114], [6, 114]], "floor_z": 0.0, "ceiling_z": 96.0},
+ {"id": "sample.wall.south", "type": "wall", "zone": "exterior", "src": "assumed", "a": [0, 3], "b": [144, 3], "thickness": 6.0, "z0": 0.0, "top_a": 104.0, "top_b": 104.0, "kind": "exterior", "openings": [{"id": "sample.wall.south.door", "kind": "door", "at": 20.0, "width": 36.0, "sill_z": 0.0, "head_z": 80.0, "swing": {"hinge": "start", "side": "left"}, "unit": {"frame": 1.5}, "casing": {"faces": "left"}}, {"id": "sample.wall.south.window", "kind": "window", "at": 76.0, "width": 48.0, "sill_z": 36.0, "head_z": 80.0, "unit": {"frame": 2.0, "verticals": [24.0], "mullion": 1.5}}], "finish_left": "drywall", "finish_right": "siding"},
+ {"id": "sample.wall.east", "type": "wall", "zone": "exterior", "src": "assumed", "a": [141, 0], "b": [141, 120], "thickness": 6.0, "z0": 0.0, "top_a": 104.0, "top_b": 104.0, "kind": "exterior", "openings": [], "finish_left": "drywall", "finish_right": "siding"},
+ {"id": "sample.wall.north", "type": "wall", "zone": "exterior", "src": "assumed", "a": [144, 117], "b": [0, 117], "thickness": 6.0, "z0": 0.0, "top_a": 104.0, "top_b": 104.0, "kind": "exterior", "openings": [], "finish_left": "drywall", "finish_right": "siding"},
+ {"id": "sample.wall.west", "type": "wall", "zone": "exterior", "src": "assumed", "a": [3, 120], "b": [3, 0], "thickness": 6.0, "z0": 0.0, "top_a": 104.0, "top_b": 104.0, "kind": "exterior", "openings": [], "finish_left": "drywall", "finish_right": "siding"},
+ {"id": "sample.column.post", "type": "column", "zone": "living", "src": "assumed", "center": [72, 60], "shape": "square", "size": [5.5, 5.5], "z0": 0.0, "z1": 86.75},
+ {"id": "sample.beam.main", "type": "beam", "zone": "living", "src": "assumed", "a": [6, 60], "b": [138, 60], "width": 5.5, "depth": 9.25, "soffit_z": 86.75, "kind": "structural"},
+ {"id": "sample.base.run", "type": "box", "zone": "living", "src": "assumed", "bbox": [90, 90, 0, 138, 114, 34.5], "kind": "base_cabinet", "front": "-y", "seams": [24.0], "rails": [28.0]},
+ {"id": "sample.counter.run", "type": "box", "zone": "living", "src": "assumed", "bbox": [89, 88.5, 34.5, 138, 114, 36], "kind": "counter"},
+ {"id": "sample.slab.porch", "type": "slab", "zone": "porch", "src": "assumed", "outline": [[0, -48], [144, -48], [144, 0], [0, 0]], "z_top": -14.0, "thickness": 4.0},
+ {"id": "sample.stair.porch", "type": "stair", "zone": "porch", "src": "assumed", "a": [20, -48], "b": [56, -48], "descend": [0.0, -1.0], "z_top": -14.0, "risers": 2, "rise": 7.0, "run": 11.0, "finish": "concrete"},
+ {"id": "sample.roof.shed", "type": "roof_plane", "zone": "roof", "src": "assumed", "pts": [[-12, -12, 112.0], [156, -12, 112.0], [156, 132, 136.0], [-12, 132, 136.0]], "thickness": 8.0}
+ ]
+}

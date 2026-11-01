@@ -1,0 +1,25 @@
+[project]
+name = "claude-sketchup"
+version = "0.1.0"
+description = "A house modelled as code: Starlark sources compiled to a JSON document and drawn in SketchUp, checked against architect plans and photos"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "numpy>=2.0",
+    "scipy>=1.13",
+    "pillow>=10.4",
+    "pypdf>=5.0",
+    "pypdfium2>=4.30",
+    "shapely>=2.0",
+    "starlark-pyo3>=2025.1",
+    "matplotlib>=3.9",
+    "opencv-python-headless>=4.10",
+    "pytest>=8.0",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-ra"

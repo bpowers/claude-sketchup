@@ -1,0 +1,741 @@
+{
+ "photo": "living-01.jpg",
+ "image_size": [
+  1600,
+  1067
+ ],
+ "eye": [
+  230.056822,
+  124.151309,
+  58.03089
+ ],
+ "target": [
+  120.087942,
+  14.305482,
+  58.03089
+ ],
+ "up": [
+  0.0,
+  0.0,
+  1.0
+ ],
+ "fov_v_deg": 54.940519383017,
+ "principal_offset_px": [
+  1.04634,
+  -0.172389
+ ],
+ "pixel_aspect": 1.0,
+ "residual_px": {
+  "rms": 0.545,
+  "max": 1.273,
+  "n": 14
+ },
+ "check_residual_px": {
+  "rms": 0.665,
+  "max": 0.665,
+  "n": 1
+ },
+ "house": {
+  "path": "house.json",
+  "sha256": "6d011350c80dee376272af1f464dd80a901e2dee626483ae1a348c1c737d761e"
+ },
+ "eye_space": {
+  "id": "living.space",
+  "zone": "living"
+ },
+ "notes": [
+  "The living room from beside the kitchen opening, toward the front door and the west window (a synthetic photo of the example cottage)"
+ ],
+ "open_leaves": [],
+ "correspondences": [
+  {
+   "label": "inside corner, front and west walls, at the floor",
+   "model": [
+    6.0,
+    6.0,
+    0.0
+   ],
+   "px": [
+    1118.5,
+    778.3
+   ],
+   "sigma_px": 1.5,
+   "residual_px": [
+    -0.515,
+    1.074
+   ],
+   "inlier": true,
+   "ref": [
+    {
+     "el": "living.wall.front",
+     "face": "left"
+    },
+    {
+     "el": "living.wall.west",
+     "face": "+x"
+    },
+    {
+     "el": "living.space",
+     "level": "floor"
+    }
+   ],
+   "feature": "living.wall.front [face left] & living.wall.west [face +x] & living.space [level floor]",
+   "model_src": {
+    "living.wall.front": "cad",
+    "living.wall.west": "cad",
+    "living.space": "cad"
+   }
+  },
+  {
+   "label": "inside corner, front and west walls, at the ceiling",
+   "model": [
+    6.0,
+    6.0,
+    96.0
+   ],
+   "px": [
+    1117.8,
+    372.2
+   ],
+   "sigma_px": 1.5,
+   "residual_px": [
+    0.185,
+    0.142
+   ],
+   "inlier": true,
+   "ref": [
+    {
+     "el": "living.wall.front",
+     "face": "left"
+    },
+    {
+     "el": "living.wall.west",
+     "face": "+x"
+    },
+    {
+     "el": "living.space",
+     "level": "ceiling"
+    }
+   ],
+   "feature": "living.wall.front [face left] & living.wall.west [face +x] & living.space [level ceiling]",
+   "model_src": {
+    "living.wall.front": "cad",
+    "living.wall.west": "cad",
+    "living.space": "cad"
+   }
+  },
+  {
+   "label": "ceiling line along the front wall",
+   "model": [
+    null,
+    6.0,
+    96.0
+   ],
+   "px": [
+    829.3,
+    306.8
+   ],
+   "sigma_px": 1.5,
+   "residual_px": [
+    0.02,
+    -0.09
+   ],
+   "inlier": true,
+   "ref": [
+    {
+     "el": "living.wall.front",
+     "face": "left"
+    },
+    {
+     "el": "living.space",
+     "level": "ceiling"
+    }
+   ],
+   "feature": "living.wall.front [face left] & living.space [level ceiling]",
+   "model_src": {
+    "living.wall.front": "cad",
+    "living.space": "cad"
+   },
+   "free": "x"
+  },
+  {
+   "label": "floor line along the west wall",
+   "model": [
+    6.0,
+    null,
+    0.0
+   ],
+   "px": [
+    1289.6,
+    810.8
+   ],
+   "sigma_px": 1.5,
+   "residual_px": [
+    0.002,
+    -0.013
+   ],
+   "inlier": true,
+   "ref": [
+    {
+     "el": "living.wall.west",
+     "face": "+x"
+    },
+    {
+     "el": "living.space",
+     "level": "floor"
+    }
+   ],
+   "feature": "living.wall.west [face +x] & living.space [level floor]",
+   "model_src": {
+    "living.wall.west": "cad",
+    "living.space": "cad"
+   },
+   "free": "y"
+  },
+  {
+   "label": "front window: casing's inner corner, start jamb at the sill",
+   "model": [
+    150.0,
+    6.75,
+    30.0
+   ],
+   "px": [
+    606.1,
+    740.6
+   ],
+   "sigma_px": 1.5,
+   "residual_px": [
+    0.281,
+    -1.242
+   ],
+   "inlier": true,
+   "ref": {
+    "el": "living.wall.front.window",
+    "jamb": "start",
+    "level": "sill",
+    "face": "left",
+    "casing": "inner"
+   },
+   "feature": "living.wall.front.window [jamb start, level sill, face left, casing inner]",
+   "model_src": {
+    "living.wall.front.window": "cad"
+   }
+  },
+  {
+   "label": "front window: casing's inner corner, start jamb at the head",
+   "model": [
+    150.0,
+    6.75,
+    80.0
+   ],
+   "px": [
+    606.6,
+    371.7
+   ],
+   "sigma_px": 1.5,
+   "residual_px": [
+    -0.219,
+    0.152
+   ],
+   "inlier": true,
+   "ref": {
+    "el": "living.wall.front.window",
+    "jamb": "start",
+    "level": "head",
+    "face": "left",
+    "casing": "inner"
+   },
+   "feature": "living.wall.front.window [jamb start, level head, face left, casing inner]",
+   "model_src": {
+    "living.wall.front.window": "cad"
+   }
+  },
+  {
+   "label": "front window: casing's inner corner, end jamb at the sill",
+   "model": [
+    210.0,
+    6.75,
+    30.0
+   ],
+   "px": [
+    73.7,
+    828.9
+   ],
+   "sigma_px": 1.5,
+   "residual_px": [
+    -0.207,
+    0.476
+   ],
+   "inlier": true,
+   "ref": {
+    "el": "living.wall.front.window",
+    "jamb": "end",
+    "level": "sill",
+    "face": "left",
+    "casing": "inner"
+   },
+   "feature": "living.wall.front.window [jamb end, level sill, face left, casing inner]",
+   "model_src": {
+    "living.wall.front.window": "cad"
+   }
+  },
+  {
+   "label": "front window: casing's inner corner, end jamb at the head",
+   "model": [
+    210.0,
+    6.75,
+    80.0
+   ],
+   "px": [
+    73.4,
+    301.0
+   ],
+   "sigma_px": 1.5,
+   "residual_px": [
+    0.093,
+    0.301
+   ],
+   "inlier": true,
+   "ref": {
+    "el": "living.wall.front.window",
+    "jamb": "end",
+    "level": "head",
+    "face": "left",
+    "casing": "inner"
+   },
+   "feature": "living.wall.front.window [jamb end, level head, face left, casing inner]",
+   "model_src": {
+    "living.wall.front.window": "cad"
+   }
+  },
+  {
+   "label": "west window: casing's inner corner, start jamb at the sill",
+   "model": [
+    6.75,
+    36.0,
+    30.0
+   ],
+   "px": [
+    1245.5,
+    663.8
+   ],
+   "sigma_px": 1.5,
+   "residual_px": [
+    0.153,
+    0.101
+   ],
+   "inlier": true,
+   "ref": {
+    "el": "living.wall.west.window",
+    "jamb": "start",
+    "level": "sill",
+    "face": "+x",
+    "casing": "inner"
+   },
+   "feature": "living.wall.west.window [jamb start, level sill, face +x, casing inner]",
+   "model_src": {
+    "living.wall.west.window": "cad"
+   }
+  },
+  {
+   "label": "west window: casing's inner corner, start jamb at the head",
+   "model": [
+    6.75,
+    36.0,
+    80.0
+   ],
+   "px": [
+    1245.7,
+    431.0
+   ],
+   "sigma_px": 1.5,
+   "residual_px": [
+    -0.047,
+    -0.009
+   ],
+   "inlier": true,
+   "ref": {
+    "el": "living.wall.west.window",
+    "jamb": "start",
+    "level": "head",
+    "face": "+x",
+    "casing": "inner"
+   },
+   "feature": "living.wall.west.window [jamb start, level head, face +x, casing inner]",
+   "model_src": {
+    "living.wall.west.window": "cad"
+   }
+  },
+  {
+   "label": "west window: casing's inner corner, end jamb at the sill",
+   "model": [
+    6.75,
+    84.0,
+    30.0
+   ],
+   "px": [
+    1513.4,
+    688.3
+   ],
+   "sigma_px": 1.5,
+   "residual_px": [
+    0.168,
+    -0.632
+   ],
+   "inlier": true,
+   "ref": {
+    "el": "living.wall.west.window",
+    "jamb": "end",
+    "level": "sill",
+    "face": "+x",
+    "casing": "inner"
+   },
+   "feature": "living.wall.west.window [jamb end, level sill, face +x, casing inner]",
+   "model_src": {
+    "living.wall.west.window": "cad"
+   }
+  },
+  {
+   "label": "west window: casing's inner corner, end jamb at the head",
+   "model": [
+    6.75,
+    84.0,
+    80.0
+   ],
+   "px": [
+    1513.6,
+    412.2
+   ],
+   "sigma_px": 1.5,
+   "residual_px": [
+    -0.032,
+    0.164
+   ],
+   "inlier": true,
+   "ref": {
+    "el": "living.wall.west.window",
+    "jamb": "end",
+    "level": "head",
+    "face": "+x",
+    "casing": "inner"
+   },
+   "feature": "living.wall.west.window [jamb end, level head, face +x, casing inner]",
+   "model_src": {
+    "living.wall.west.window": "cad"
+   }
+  },
+  {
+   "label": "front door: casing's inner corner, end jamb at the head",
+   "model": [
+    132.0,
+    6.75,
+    80.0
+   ],
+   "px": [
+    708.3,
+    385.6
+   ],
+   "sigma_px": 1.5,
+   "residual_px": [
+    0.037,
+    -0.25
+   ],
+   "inlier": true,
+   "ref": {
+    "el": "living.wall.front.door",
+    "face": "left",
+    "jamb": "end",
+    "level": "head",
+    "casing": "inner"
+   },
+   "feature": "living.wall.front.door [face left, jamb end, level head, casing inner]",
+   "model_src": {
+    "living.wall.front.door": "cad"
+   }
+  },
+  {
+   "label": "front door: casing's outer edge, end jamb at the floor",
+   "model": [
+    135.5,
+    6.75,
+    0.0
+   ],
+   "px": [
+    689.8,
+    930.9
+   ],
+   "sigma_px": 1.5,
+   "residual_px": [
+    0.069,
+    -0.236
+   ],
+   "inlier": true,
+   "ref": [
+    {
+     "el": "living.wall.front.door",
+     "face": "left",
+     "jamb": "end",
+     "casing": "outer"
+    },
+    {
+     "el": "living.space",
+     "level": "floor"
+    }
+   ],
+   "feature": "living.wall.front.door [face left, jamb end, casing outer] & living.space [level floor]",
+   "model_src": {
+    "living.wall.front.door": "cad",
+    "living.space": "cad"
+   }
+  },
+  {
+   "label": "front door: casing's inner corner, start jamb at the head",
+   "model": [
+    96.0,
+    6.75,
+    80.0
+   ],
+   "px": [
+    869.1,
+    406.5
+   ],
+   "sigma_px": 1.5,
+   "residual_px": [
+    -0.663,
+    0.047
+   ],
+   "inlier": null,
+   "ref": {
+    "el": "living.wall.front.door",
+    "face": "left",
+    "jamb": "start",
+    "level": "head",
+    "casing": "inner"
+   },
+   "feature": "living.wall.front.door [face left, jamb start, level head, casing inner]",
+   "model_src": {
+    "living.wall.front.door": "cad"
+   },
+   "role": "check"
+  }
+ ],
+ "solve": {
+  "settings": {
+   "attitude": "level",
+   "principal": "free",
+   "principal_offset": [
+    0.0,
+    -0.023
+   ],
+   "principal_prior_px": null,
+   "focal": "free",
+   "f": null,
+   "aspect": "fixed",
+   "pixel_aspect": 1.0,
+   "aspect_bounds": [
+    0.8,
+    1.25
+   ],
+   "distortion": "none",
+   "k1": 0.0,
+   "k2": 0.0,
+   "k1_prior": [
+    0.0,
+    0.15
+   ],
+   "k2_prior": [
+    0.0,
+    0.1
+   ],
+   "loss": "soft_l1",
+   "f_scale": 1.5,
+   "outlier_threshold": 3.0,
+   "fov_h_bounds_deg": [
+    10.0,
+    140.0
+   ],
+   "start": "pnp f=800 offset=(0,0)",
+   "dlt": "ok"
+  },
+  "rms_inlier_px": 0.545,
+  "sigma_ratio": 0.312,
+  "params": {
+   "yaw": -135.032074,
+   "eye_x": 230.056822,
+   "eye_y": 124.151309,
+   "eye_z": 58.03089,
+   "f": 1026.144073,
+   "dx": 1.04634,
+   "dy": -0.172389
+  },
+  "std": {
+   "yaw": 0.074802,
+   "eye_x": 0.241599,
+   "eye_y": 0.215648,
+   "eye_z": 0.062613,
+   "f": 2.316813,
+   "dx": 1.286975,
+   "dy": 0.418593,
+   "eye_along_view": 0.296528,
+   "eye_largest_axis": 0.297359
+  },
+  "correlations": [
+   [
+    "eye_x",
+    "f",
+    0.9732
+   ],
+   [
+    "eye_z",
+    "dy",
+    -0.9527
+   ]
+  ],
+  "warnings": [],
+  "outliers": [],
+  "geometry": {
+   "collinear": false,
+   "coplanar": false,
+   "coverage": [
+    0.9,
+    0.59
+   ]
+  },
+  "segments_used": {},
+  "candidates": [
+   {
+    "start": "dlt",
+    "cost": 0.8848,
+    "f": 1026.1
+   },
+   {
+    "start": "pnp f=2986 offset=(0,-0)",
+    "cost": 0.8848,
+    "f": 1026.1
+   },
+   {
+    "start": "pnp f=2986 offset=(0,0)",
+    "cost": 0.8848,
+    "f": 1026.1
+   },
+   {
+    "start": "pnp f=2198 offset=(0,-0)",
+    "cost": 0.8848,
+    "f": 1026.1
+   },
+   {
+    "start": "pnp f=2198 offset=(0,0)",
+    "cost": 0.8848,
+    "f": 1026.1
+   },
+   {
+    "start": "pnp f=1716 offset=(0,-0)",
+    "cost": 0.8848,
+    "f": 1026.1
+   },
+   {
+    "start": "pnp f=1716 offset=(0,0)",
+    "cost": 0.8848,
+    "f": 1026.1
+   },
+   {
+    "start": "pnp f=1386 offset=(0,-0)",
+    "cost": 0.8848,
+    "f": 1026.1
+   },
+   {
+    "start": "pnp f=1386 offset=(0,0)",
+    "cost": 0.8848,
+    "f": 1026.1
+   },
+   {
+    "start": "pnp f=1143 offset=(0,-0)",
+    "cost": 0.8848,
+    "f": 1026.1
+   },
+   {
+    "start": "pnp f=1143 offset=(0,0)",
+    "cost": 0.8848,
+    "f": 1026.1
+   },
+   {
+    "start": "pnp f=953 offset=(0,-0)",
+    "cost": 0.8848,
+    "f": 1026.1
+   }
+  ],
+  "degenerate": [],
+  "options": {
+   "attitude": "level",
+   "principal": "free",
+   "principal_offset": [
+    0.0,
+    -0.023
+   ],
+   "principal_prior_px": null,
+   "focal": null,
+   "aspect": "fixed",
+   "pixel_aspect": 1.0,
+   "aspect_bounds": [
+    0.8,
+    1.25
+   ],
+   "distortion": "none",
+   "k1": 0.0,
+   "k2": 0.0,
+   "k1_prior": [
+    0.0,
+    0.15
+   ],
+   "k2_prior": [
+    0.0,
+    0.1
+   ],
+   "loss": "soft_l1",
+   "f_scale": 1.5,
+   "outlier_threshold": 3.0,
+   "fov_h_bounds": [
+    10.0,
+    140.0
+   ],
+   "start": null,
+   "snap": true,
+   "snap_radius": 12.0,
+   "use_lines": false,
+   "segment_sigma": 1.5,
+   "max_segments": 60,
+   "hide_tags": null
+  },
+  "guard": {
+   "limits": {
+    "f_std_frac": 0.2,
+    "eye_std_in": 36.0,
+    "pixel_aspect_std": 0.03
+   },
+   "values": {
+    "f_std_px": 2.316813,
+    "eye_along_view_std_in": 0.296528,
+    "median_depth_in": 155.432495,
+    "pixel_aspect_std": null,
+    "sigma_ratio": 0.311872
+   },
+   "refused": [],
+   "causes": [],
+   "forced": false
+  }
+ },
+ "verticals": {
+  "state": "parallel",
+  "n_segments": 44,
+  "pitch_deg": -0.002504346126688751,
+  "pitch_ci95_deg": [
+   -0.04334916109836136,
+   0.04303033632292661
+  ],
+  "roll_deg": 0.009459426389092866,
+  "f_assumed": 1142.5184053936916,
+  "note": "verticals are parallel: the camera is level; any recomposition is a principal offset"
+ },
+ "horizon_dy_px": -0.02312420771551664,
+ "snap_warnings": []
+}

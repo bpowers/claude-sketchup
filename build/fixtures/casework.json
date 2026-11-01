@@ -1,0 +1,19 @@
+{
+ "ir_version": 1,
+ "meta": {"project": {"name": "fixture: boxes (casework, appliances, fixtures, trim)"}, "variant": "fixture", "generated_by": "hand-written", "note": "A kitchen run along y 0..24 facing +y: base cabinets with door seams and a drawer rail, a counter over them, a sink (a fixture) set in, a refrigerator with a freezer rail, upper cabinets on a soffit, a tall pantry facing -x, a baseboard trim, a hearth and masonry chimney block, and a placeholder for something not yet identified."},
+ "zones": {"kitchen": {"storey": 0}, "living": {"storey": 0}},
+ "datums": {"main_floor": 0.0, "main_ceiling": 96.0},
+ "elements": [
+ {"id": "kitchen.base.run", "type": "box", "zone": "kitchen", "src": "assumed", "bbox": [0, 0, 0, 90, 24, 34.5], "kind": "base_cabinet", "front": "+y", "seams": [30.0, 60.0], "rails": [28.0]},
+ {"id": "kitchen.counter.run", "type": "box", "zone": "kitchen", "src": "assumed", "bbox": [0, 0, 34.5, 91, 25.5, 36], "kind": "counter"},
+ {"id": "kitchen.sink.main", "type": "box", "zone": "kitchen", "src": "assumed", "bbox": [36, 4, 30, 60, 20, 36.5], "kind": "fixture", "subtype": "sink"},
+ {"id": "kitchen.fridge", "type": "box", "zone": "kitchen", "src": "assumed", "bbox": [91, 0, 0, 127, 30, 70], "kind": "appliance", "subtype": "fridge", "front": "+y", "seams": [18.0], "rails": [48.0]},
+ {"id": "kitchen.upper.run", "type": "box", "zone": "kitchen", "src": "assumed", "bbox": [0, 0, 54, 90, 13, 84], "kind": "upper_cabinet", "front": "+y", "seams": [30.0, 60.0], "finish": "cabinet_white"},
+ {"id": "kitchen.soffit.run", "type": "box", "zone": "kitchen", "src": "assumed", "bbox": [0, 0, 84, 127, 14, 96], "kind": "soffit"},
+ {"id": "kitchen.pantry", "type": "box", "zone": "kitchen", "src": "assumed", "bbox": [160, 0, 0, 184, 30, 90], "kind": "tall_cabinet", "front": "-x", "seams": [15.0], "rails": [45.0]},
+ {"id": "kitchen.base.trim", "type": "box", "zone": "kitchen", "src": "assumed", "bbox": [127, 0, 0, 160, 0.75, 4], "kind": "trim"},
+ {"id": "living.hearth", "type": "box", "zone": "living", "src": "assumed", "bbox": [0, 60, 0, 60, 78, 2], "kind": "hearth", "finish": "stone"},
+ {"id": "living.chimney", "type": "box", "zone": "living", "src": "assumed", "bbox": [6, 78, 0, 54, 96, 96], "kind": "masonry"},
+ {"id": "living.unknown.thing", "type": "box", "zone": "living", "src": "assumed", "bbox": [100, 60, 0, 112, 72, 30], "kind": "placeholder", "note": "seen in one photo; what it is is an open question"}
+ ]
+}

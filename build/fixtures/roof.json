@@ -1,0 +1,11 @@
+{
+ "ir_version": 1,
+ "meta": {"project": {"name": "fixture: roof planes"}, "variant": "fixture", "generated_by": "hand-written", "note": "A 6:12 gable over a 144 x 96 in footprint, ridge along x at y 48 and z 130, eaves 12 in past the walls on every side (two planes, 8 in thick, swept vertically down), and a shed roof beside it rising 2:12 with a skylight hole."},
+ "zones": {"roof": {"storey": 9}},
+ "datums": {"main_floor": 0.0, "main_ceiling": 96.0},
+ "elements": [
+ {"id": "roof.gable.south", "type": "roof_plane", "zone": "roof", "src": "assumed", "pts": [[-12, -12, 100.0], [156, -12, 100.0], [156, 48, 130.0], [-12, 48, 130.0]], "thickness": 8.0, "finish": "shingle"},
+ {"id": "roof.gable.north", "type": "roof_plane", "zone": "roof", "src": "assumed", "pts": [[-12, 48, 130.0], [156, 48, 130.0], [156, 108, 100.0], [-12, 108, 100.0]], "thickness": 8.0, "finish": "shingle"},
+ {"id": "roof.shed", "type": "roof_plane", "zone": "roof", "src": "assumed", "pts": [[168, -12, 96.0], [264, -12, 96.0], [264, 108, 116.0], [168, 108, 116.0]], "thickness": 6.0, "holes": [[200, 30, 224, 54]]}
+ ]
+}

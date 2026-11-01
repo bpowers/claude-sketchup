@@ -1,0 +1,14 @@
+{
+ "ir_version": 1,
+ "meta": {"project": {"name": "fixture: columns, beams and stairs"}, "variant": "fixture", "generated_by": "hand-written", "note": "A square column with a capital and a round one, each under a beam (a structural beam on the square column, a faux beam crossing the round one), a three-riser stair down toward -y from a top nosing line at z 0, and a single riser (a step with no tread) beside it."},
+ "zones": {"living": {"storey": 0}, "porch": {"storey": 0, "outdoor": true}},
+ "datums": {"main_floor": 0.0, "main_ceiling": 96.0},
+ "elements": [
+ {"id": "living.column.square", "type": "column", "zone": "living", "src": "assumed", "center": [40, 60], "shape": "square", "size": [5.5, 5.5], "z0": 0.0, "z1": 84.0, "capital": {"size": [9.0, 9.0], "height": 4.0}},
+ {"id": "living.column.round", "type": "column", "zone": "living", "src": "assumed", "center": [120, 60], "shape": "round", "diameter": 8.0, "z0": 0.0, "z1": 96.0},
+ {"id": "living.beam.main", "type": "beam", "zone": "living", "src": "assumed", "a": [0, 60], "b": [80, 60], "width": 5.5, "depth": 9.25, "soffit_z": 84.0, "kind": "structural"},
+ {"id": "living.beam.faux", "type": "beam", "zone": "living", "src": "assumed", "a": [100, 60], "b": [140, 60], "width": 4.0, "depth": 6.0, "soffit_z": 88.0, "kind": "faux"},
+ {"id": "porch.stair.main", "type": "stair", "zone": "porch", "src": "assumed", "a": [20, 0], "b": [56, 0], "descend": [0.0, -1.0], "z_top": 0.0, "risers": 3, "rise": 7.0, "run": 11.0},
+ {"id": "porch.stair.step", "type": "stair", "zone": "porch", "src": "assumed", "a": [80, 0], "b": [116, 0], "descend": [0.0, -1.0], "z_top": 0.0, "risers": 1, "rise": 6.0, "run": 11.0, "finish": "concrete"}
+ ]
+}

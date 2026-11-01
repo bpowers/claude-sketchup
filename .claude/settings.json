@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(uv run python look.py:*)",
+      "Bash(uv run python housec.py:*)",
+      "Bash(uv run python areasc.py:*)",
+      "Bash(uv run python -m ir.plan:*)",
+      "Bash(uv run python -m extract.pdf:*)",
+      "Bash(uv run python -m tools.plancheck:*)",
+      "Bash(uv run python -m overlay.:*)",
+      "Bash(uv run python bridge/client.py ping)",
+      "Bash(uv run python bridge/client.py built)",
+      "Bash(uv run python bridge/client.py views:*)",
+      "Bash(uv run pytest:*)"
+    ]
+  }
+}

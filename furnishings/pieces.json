@@ -1,0 +1,37 @@
+{
+ "about": "The FURNISHINGS placement list: loose furniture drawn into SketchUp by bridge/furnishings.py place. furnishings/README.md describes a piece.",
+ "pieces": [
+  {
+   "id": "living_sofa",
+   "recipe": "sofa",
+   "at": [66.0, 111.0, 0.0],
+   "rotation": 0.0,
+   "size": [84.0, 36.0, 32.0],
+   "params": {"cushions": 3},
+   "finish": "fabric_gray",
+   "tag": "furnishings/living",
+   "note": "Its back 0.75 in off the kitchen partition's living-room face (y 129.75), between the west wall and the cased opening, facing the front window."
+  },
+  {
+   "id": "living_rug",
+   "recipe": "rug",
+   "at": [66.0, 68.0, 0.0],
+   "rotation": 0.0,
+   "size": [84.0, 48.0, 0.5],
+   "finish": "fabric_rust",
+   "tag": "furnishings/living",
+   "note": "In front of the sofa, clear of the front door's swing (y 6 to 42)."
+  },
+  {
+   "id": "bedroom_bed",
+   "recipe": "bed",
+   "at": [283.0, 52.0, 0.0],
+   "rotation": 90.0,
+   "size": [60.0, 80.0, 40.0],
+   "params": {"pillows": 2},
+   "finish": "wood_light",
+   "tag": "furnishings/bedroom",
+   "note": "A queen, its headboard against the partition (turned 90 degrees, the headboard toward -x), clear of the bedroom door's swing (y 90 to 122) and the bath door."
+  }
+ ]
+}

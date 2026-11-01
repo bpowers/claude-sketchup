@@ -1,0 +1,949 @@
+{
+ "ir_version": 1,
+ "meta": {
+  "project": {
+   "name": "Example cottage",
+   "address": "An example house; replace with the house being modelled"
+  },
+  "variant": "today",
+  "generated_by": "housec",
+  "checks": [
+   "the main floor: floor_z of living.space, kitchen.space, bedroom.space, bath.space at z 0.0",
+   "the ceiling: ceiling_z of living.space, kitchen.space, bedroom.space, bath.space at z 96.0",
+   "porch.stair joins living.space (z 0.0) to porch.space (z -14.0)",
+   "porch.column stands on porch.slab and carries porch.beam",
+   "door and cased sills: 4 stand on a floor beside them"
+  ]
+ },
+ "zones": {
+  "living": {
+   "storey": 0
+  },
+  "kitchen": {
+   "storey": 0
+  },
+  "bedroom": {
+   "storey": 0
+  },
+  "bath": {
+   "storey": 0
+  },
+  "porch": {
+   "storey": 0,
+   "outdoor": true
+  },
+  "roof": {
+   "storey": 9
+  }
+ },
+ "datums": {
+  "main_floor": 0.0,
+  "ceiling": 96.0,
+  "wall_top": 104.0,
+  "porch": -14.0,
+  "grade": -18.0,
+  "ridge": 184.0
+ },
+ "elements": [
+  {
+   "id": "living.space",
+   "type": "space",
+   "zone": "living",
+   "src": "cad",
+   "name": "Living room",
+   "outline": [
+    [
+     6.0,
+     6.0
+    ],
+    [
+     237.75,
+     6.0
+    ],
+    [
+     237.75,
+     129.75
+    ],
+    [
+     6.0,
+     129.75
+    ]
+   ],
+   "floor_z": 0.0,
+   "ceiling_z": 96.0,
+   "floor_finish": "oak",
+   "ceiling_finish": "drywall",
+   "build_floor": true,
+   "build_ceiling": true
+  },
+  {
+   "id": "living.wall.front",
+   "type": "wall",
+   "zone": "living",
+   "src": "cad",
+   "name": "Front wall",
+   "finish": "siding",
+   "a": [
+    0.0,
+    3.0
+   ],
+   "b": [
+    360.0,
+    3.0
+   ],
+   "thickness": 6.0,
+   "z0": -18.0,
+   "top_a": 104.0,
+   "top_b": 104.0,
+   "kind": "exterior",
+   "finish_left": "drywall",
+   "finish_right": "siding",
+   "openings": [
+    {
+     "id": "living.wall.front.door",
+     "kind": "door",
+     "at": 96.0,
+     "width": 36.0,
+     "sill_z": 0.0,
+     "head_z": 80.0,
+     "swing": {
+      "hinge": "start",
+      "side": "left"
+     },
+     "unit": {
+      "frame": {
+       "left": 4.5,
+       "right": 4.5,
+       "bottom": 9.0,
+       "top": 4.5
+      },
+      "verticals": [],
+      "mullion": 0.0,
+      "horizontals": [
+       36.0
+      ],
+      "rail": 6.0,
+      "glazed": true,
+      "finish": "wood_mid"
+     },
+     "casing": {
+      "width": 3.5,
+      "proud": 0.75,
+      "faces": "both",
+      "finish": "trim_white"
+     },
+     "note": "The front door: glass over and under a lock rail, opening into the living room."
+    },
+    {
+     "id": "living.wall.front.window",
+     "kind": "window",
+     "at": 150.0,
+     "width": 60.0,
+     "sill_z": 30.0,
+     "head_z": 80.0,
+     "unit": {
+      "frame": 2.0,
+      "verticals": [
+       20.416666666666668,
+       39.583333333333336
+      ],
+      "mullion": 1.5,
+      "horizontals": [],
+      "rail": 0.0,
+      "glazed": true,
+      "finish": "trim_white"
+     },
+     "casing": {
+      "width": 3.5,
+      "proud": 0.75,
+      "faces": "both",
+      "finish": "trim_white"
+     }
+    },
+    {
+     "id": "living.wall.front.window_bedroom",
+     "kind": "window",
+     "at": 270.0,
+     "width": 48.0,
+     "sill_z": 30.0,
+     "head_z": 80.0,
+     "unit": {
+      "frame": 2.0,
+      "verticals": [
+       24.0
+      ],
+      "mullion": 1.5,
+      "horizontals": [],
+      "rail": 0.0,
+      "glazed": true,
+      "finish": "trim_white"
+     },
+     "casing": {
+      "width": 3.5,
+      "proud": 0.75,
+      "faces": "both",
+      "finish": "trim_white"
+     }
+    }
+   ]
+  },
+  {
+   "id": "living.wall.west",
+   "type": "wall",
+   "zone": "living",
+   "src": "cad",
+   "name": "West gable wall, front half",
+   "finish": "siding",
+   "note": "The gable wall rises to the roof's underside; its back half is kitchen.wall.west.",
+   "a": [
+    3.0,
+    0.0
+   ],
+   "b": [
+    3.0,
+    144.0
+   ],
+   "thickness": 6.0,
+   "z0": -18.0,
+   "top_a": 104.0,
+   "top_b": 176.0,
+   "kind": "exterior",
+   "finish_left": "siding",
+   "finish_right": "drywall",
+   "openings": [
+    {
+     "id": "living.wall.west.window",
+     "kind": "window",
+     "at": 36.0,
+     "width": 48.0,
+     "sill_z": 30.0,
+     "head_z": 80.0,
+     "unit": {
+      "frame": 2.0,
+      "verticals": [
+       24.0
+      ],
+      "mullion": 1.5,
+      "horizontals": [],
+      "rail": 0.0,
+      "glazed": true,
+      "finish": "trim_white"
+     },
+     "casing": {
+      "width": 3.5,
+      "proud": 0.75,
+      "faces": "both",
+      "finish": "trim_white"
+     }
+    }
+   ]
+  },
+  {
+   "id": "living.wall.kitchen",
+   "type": "wall",
+   "zone": "living",
+   "src": "cad",
+   "name": "Partition to the kitchen",
+   "finish": "drywall",
+   "a": [
+    6.0,
+    132.0
+   ],
+   "b": [
+    237.75,
+    132.0
+   ],
+   "thickness": 4.5,
+   "z0": 0.0,
+   "top_a": 96.0,
+   "top_b": 96.0,
+   "kind": "interior",
+   "openings": [
+    {
+     "id": "living.wall.kitchen.cased",
+     "kind": "cased",
+     "at": 144.0,
+     "width": 60.0,
+     "sill_z": 0.0,
+     "head_z": 80.0,
+     "casing": {
+      "width": 3.5,
+      "proud": 0.75,
+      "faces": "both",
+      "finish": "trim_white"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kitchen.space",
+   "type": "space",
+   "zone": "kitchen",
+   "src": "cad",
+   "name": "Kitchen",
+   "outline": [
+    [
+     6.0,
+     134.25
+    ],
+    [
+     237.75,
+     134.25
+    ],
+    [
+     237.75,
+     282.0
+    ],
+    [
+     6.0,
+     282.0
+    ]
+   ],
+   "floor_z": 0.0,
+   "ceiling_z": 96.0,
+   "floor_finish": "tile_light",
+   "ceiling_finish": "drywall",
+   "build_floor": true,
+   "build_ceiling": true
+  },
+  {
+   "id": "kitchen.wall.back",
+   "type": "wall",
+   "zone": "kitchen",
+   "src": "cad",
+   "name": "Back wall",
+   "finish": "siding",
+   "a": [
+    0.0,
+    285.0
+   ],
+   "b": [
+    360.0,
+    285.0
+   ],
+   "thickness": 6.0,
+   "z0": -18.0,
+   "top_a": 104.0,
+   "top_b": 104.0,
+   "kind": "exterior",
+   "finish_left": "siding",
+   "finish_right": "drywall",
+   "openings": [
+    {
+     "id": "kitchen.wall.back.window",
+     "kind": "window",
+     "at": 66.0,
+     "width": 36.0,
+     "sill_z": 42.0,
+     "head_z": 80.0,
+     "unit": {
+      "frame": 2.0,
+      "verticals": [],
+      "mullion": 1.5,
+      "horizontals": [],
+      "rail": 0.0,
+      "glazed": true,
+      "finish": "trim_white"
+     },
+     "casing": {
+      "width": 3.5,
+      "proud": 0.75,
+      "faces": "both",
+      "finish": "trim_white"
+     }
+    },
+    {
+     "id": "kitchen.wall.back.window_bath",
+     "kind": "window",
+     "at": 300.0,
+     "width": 30.0,
+     "sill_z": 54.0,
+     "head_z": 80.0,
+     "unit": {
+      "frame": 2.0,
+      "verticals": [],
+      "mullion": 1.5,
+      "horizontals": [],
+      "rail": 0.0,
+      "glazed": true,
+      "finish": "trim_white"
+     },
+     "casing": {
+      "width": 3.5,
+      "proud": 0.75,
+      "faces": "both",
+      "finish": "trim_white"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kitchen.wall.west",
+   "type": "wall",
+   "zone": "kitchen",
+   "src": "cad",
+   "name": "West gable wall, back half",
+   "finish": "siding",
+   "a": [
+    3.0,
+    144.0
+   ],
+   "b": [
+    3.0,
+    288.0
+   ],
+   "thickness": 6.0,
+   "z0": -18.0,
+   "top_a": 176.0,
+   "top_b": 104.0,
+   "kind": "exterior",
+   "finish_left": "siding",
+   "finish_right": "drywall",
+   "openings": []
+  },
+  {
+   "id": "kitchen.base.back",
+   "type": "box",
+   "zone": "kitchen",
+   "src": "cad",
+   "finish": "cabinet_white",
+   "bbox": [
+    6.0,
+    258.0,
+    0.0,
+    150.0,
+    282.0,
+    34.5
+   ],
+   "kind": "base_cabinet",
+   "front": "-y",
+   "seams": [
+    24.0,
+    48.0,
+    72.0,
+    96.0,
+    120.0
+   ],
+   "rails": [
+    28.5
+   ]
+  },
+  {
+   "id": "kitchen.counter.back",
+   "type": "box",
+   "zone": "kitchen",
+   "src": "cad",
+   "finish": "counter_stone",
+   "bbox": [
+    6.0,
+    256.5,
+    34.5,
+    150.0,
+    282.0,
+    36.0
+   ],
+   "kind": "counter"
+  },
+  {
+   "id": "kitchen.upper.left",
+   "type": "box",
+   "zone": "kitchen",
+   "src": "cad",
+   "finish": "cabinet_white",
+   "bbox": [
+    6.0,
+    270.0,
+    54.0,
+    62.0,
+    282.0,
+    90.0
+   ],
+   "kind": "upper_cabinet",
+   "front": "-y",
+   "seams": [
+    14.0,
+    28.0,
+    42.0
+   ]
+  },
+  {
+   "id": "kitchen.upper.right",
+   "type": "box",
+   "zone": "kitchen",
+   "src": "cad",
+   "finish": "cabinet_white",
+   "bbox": [
+    106.0,
+    270.0,
+    54.0,
+    150.0,
+    282.0,
+    90.0
+   ],
+   "kind": "upper_cabinet",
+   "front": "-y",
+   "seams": [
+    14.666666666666666,
+    29.333333333333332
+   ]
+  },
+  {
+   "id": "kitchen.fridge",
+   "type": "box",
+   "zone": "kitchen",
+   "src": "cad",
+   "finish": "stainless",
+   "bbox": [
+    150.0,
+    252.0,
+    0.0,
+    186.0,
+    282.0,
+    70.0
+   ],
+   "kind": "appliance",
+   "subtype": "fridge",
+   "front": "-y",
+   "seams": [],
+   "rails": [
+    30.0
+   ]
+  },
+  {
+   "id": "bedroom.space",
+   "type": "space",
+   "zone": "bedroom",
+   "src": "cad",
+   "name": "Bedroom",
+   "outline": [
+    [
+     242.25,
+     6.0
+    ],
+    [
+     354.0,
+     6.0
+    ],
+    [
+     354.0,
+     165.75
+    ],
+    [
+     242.25,
+     165.75
+    ]
+   ],
+   "floor_z": 0.0,
+   "ceiling_z": 96.0,
+   "floor_finish": "carpet",
+   "ceiling_finish": "drywall",
+   "build_floor": true,
+   "build_ceiling": true
+  },
+  {
+   "id": "bedroom.wall.east",
+   "type": "wall",
+   "zone": "bedroom",
+   "src": "cad",
+   "name": "East gable wall, front half",
+   "finish": "siding",
+   "note": "The gable wall rises to the roof's underside; its back half is bath.wall.east.",
+   "a": [
+    357.0,
+    0.0
+   ],
+   "b": [
+    357.0,
+    144.0
+   ],
+   "thickness": 6.0,
+   "z0": -18.0,
+   "top_a": 104.0,
+   "top_b": 176.0,
+   "kind": "exterior",
+   "finish_left": "drywall",
+   "finish_right": "siding",
+   "openings": [
+    {
+     "id": "bedroom.wall.east.window",
+     "kind": "window",
+     "at": 60.0,
+     "width": 48.0,
+     "sill_z": 30.0,
+     "head_z": 80.0,
+     "unit": {
+      "frame": 2.0,
+      "verticals": [
+       24.0
+      ],
+      "mullion": 1.5,
+      "horizontals": [],
+      "rail": 0.0,
+      "glazed": true,
+      "finish": "trim_white"
+     },
+     "casing": {
+      "width": 3.5,
+      "proud": 0.75,
+      "faces": "both",
+      "finish": "trim_white"
+     }
+    }
+   ]
+  },
+  {
+   "id": "bedroom.wall.partition",
+   "type": "wall",
+   "zone": "bedroom",
+   "src": "cad",
+   "name": "Partition between the living side and the bedroom side",
+   "finish": "drywall",
+   "a": [
+    240.0,
+    6.0
+   ],
+   "b": [
+    240.0,
+    282.0
+   ],
+   "thickness": 4.5,
+   "z0": 0.0,
+   "top_a": 96.0,
+   "top_b": 96.0,
+   "kind": "interior",
+   "openings": [
+    {
+     "id": "bedroom.wall.partition.door",
+     "kind": "door",
+     "at": 84.0,
+     "width": 32.0,
+     "sill_z": 0.0,
+     "head_z": 80.0,
+     "swing": {
+      "hinge": "start",
+      "side": "right"
+     },
+     "unit": {
+      "frame": 0.75,
+      "verticals": [],
+      "mullion": 0.0,
+      "horizontals": [],
+      "rail": 0.0,
+      "glazed": false,
+      "finish": "trim_white",
+      "leaf_finish": "paint_white"
+     },
+     "casing": {
+      "width": 3.5,
+      "proud": 0.75,
+      "faces": "both",
+      "finish": "trim_white"
+     }
+    }
+   ]
+  },
+  {
+   "id": "bath.space",
+   "type": "space",
+   "zone": "bath",
+   "src": "cad",
+   "name": "Bath",
+   "outline": [
+    [
+     242.25,
+     170.25
+    ],
+    [
+     354.0,
+     170.25
+    ],
+    [
+     354.0,
+     282.0
+    ],
+    [
+     242.25,
+     282.0
+    ]
+   ],
+   "floor_z": 0.0,
+   "ceiling_z": 96.0,
+   "floor_finish": "tile_light",
+   "ceiling_finish": "drywall",
+   "build_floor": true,
+   "build_ceiling": true
+  },
+  {
+   "id": "bath.wall.east",
+   "type": "wall",
+   "zone": "bath",
+   "src": "cad",
+   "name": "East gable wall, back half",
+   "finish": "siding",
+   "a": [
+    357.0,
+    144.0
+   ],
+   "b": [
+    357.0,
+    288.0
+   ],
+   "thickness": 6.0,
+   "z0": -18.0,
+   "top_a": 176.0,
+   "top_b": 104.0,
+   "kind": "exterior",
+   "finish_left": "drywall",
+   "finish_right": "siding",
+   "openings": []
+  },
+  {
+   "id": "bath.wall.bedroom",
+   "type": "wall",
+   "zone": "bath",
+   "src": "cad",
+   "name": "Partition between the bedroom and the bath",
+   "finish": "drywall",
+   "a": [
+    242.25,
+    168.0
+   ],
+   "b": [
+    354.0,
+    168.0
+   ],
+   "thickness": 4.5,
+   "z0": 0.0,
+   "top_a": 96.0,
+   "top_b": 96.0,
+   "kind": "interior",
+   "openings": [
+    {
+     "id": "bath.wall.bedroom.door",
+     "kind": "door",
+     "at": 30.0,
+     "width": 28.0,
+     "sill_z": 0.0,
+     "head_z": 80.0,
+     "swing": {
+      "hinge": "start",
+      "side": "left"
+     },
+     "unit": {
+      "frame": 0.75,
+      "verticals": [],
+      "mullion": 0.0,
+      "horizontals": [],
+      "rail": 0.0,
+      "glazed": false,
+      "finish": "trim_white",
+      "leaf_finish": "paint_white"
+     },
+     "casing": {
+      "width": 3.5,
+      "proud": 0.75,
+      "faces": "both",
+      "finish": "trim_white"
+     }
+    }
+   ]
+  },
+  {
+   "id": "porch.slab",
+   "type": "slab",
+   "zone": "porch",
+   "src": "cad",
+   "name": "Porch slab",
+   "finish": "concrete",
+   "note": "It runs down to grade.",
+   "outline": [
+    [
+     48.0,
+     -72.0
+    ],
+    [
+     180.0,
+     -72.0
+    ],
+    [
+     180.0,
+     0.0
+    ],
+    [
+     48.0,
+     0.0
+    ]
+   ],
+   "z_top": -14.0,
+   "thickness": 4.0
+  },
+  {
+   "id": "porch.space",
+   "type": "space",
+   "zone": "porch",
+   "src": "cad",
+   "name": "Porch",
+   "note": "The slab draws the floor; the space says where outdoors is.",
+   "outline": [
+    [
+     48.0,
+     -72.0
+    ],
+    [
+     180.0,
+     -72.0
+    ],
+    [
+     180.0,
+     0.0
+    ],
+    [
+     48.0,
+     0.0
+    ]
+   ],
+   "floor_z": -14.0,
+   "build_floor": false
+  },
+  {
+   "id": "porch.stair",
+   "type": "stair",
+   "zone": "porch",
+   "src": "cad",
+   "name": "Front steps",
+   "finish": "concrete",
+   "a": [
+    90.0,
+    0.0
+   ],
+   "b": [
+    138.0,
+    0.0
+   ],
+   "descend": [
+    0.0,
+    -1.0
+   ],
+   "z_top": 0.0,
+   "risers": 2,
+   "rise": 7.0,
+   "run": 11.0
+  },
+  {
+   "id": "porch.column",
+   "type": "column",
+   "zone": "porch",
+   "src": "cad",
+   "name": "Pergola post",
+   "finish": "trim_white",
+   "center": [
+    174.0,
+    -66.0
+   ],
+   "shape": "square",
+   "size": [
+    5.5,
+    5.5
+   ],
+   "z0": -14.0,
+   "z1": 84.0,
+   "capital": {
+    "size": [
+     7.5,
+     7.5
+    ],
+    "height": 3.5
+   }
+  },
+  {
+   "id": "porch.beam",
+   "type": "beam",
+   "zone": "porch",
+   "src": "cad",
+   "name": "Pergola beam",
+   "finish": "wood_mid",
+   "a": [
+    174.0,
+    0.0
+   ],
+   "b": [
+    174.0,
+    -72.0
+   ],
+   "width": 5.5,
+   "depth": 9.25,
+   "soffit_z": 84.0,
+   "kind": "structural"
+  },
+  {
+   "id": "roof.plane.front",
+   "type": "roof_plane",
+   "zone": "roof",
+   "src": "cad",
+   "name": "Roof, front slope",
+   "finish": "shingle",
+   "pts": [
+    [
+     -12.0,
+     -18.0,
+     103.0
+    ],
+    [
+     372.0,
+     -18.0,
+     103.0
+    ],
+    [
+     372.0,
+     144.0,
+     184.0
+    ],
+    [
+     -12.0,
+     144.0,
+     184.0
+    ]
+   ],
+   "thickness": 8.0
+  },
+  {
+   "id": "roof.plane.back",
+   "type": "roof_plane",
+   "zone": "roof",
+   "src": "cad",
+   "name": "Roof, back slope",
+   "finish": "shingle",
+   "pts": [
+    [
+     -12.0,
+     144.0,
+     184.0
+    ],
+    [
+     372.0,
+     144.0,
+     184.0
+    ],
+    [
+     372.0,
+     306.0,
+     103.0
+    ],
+    [
+     -12.0,
+     306.0,
+     103.0
+    ]
+   ],
+   "thickness": 8.0
+  }
+ ],
+ "location": {
+  "latitude": 40.0,
+  "longitude": -105.0,
+  "north_angle": 0.0,
+  "city": "Example",
+  "country": "Example",
+  "tz_offset": -7.0
+ }
+}
